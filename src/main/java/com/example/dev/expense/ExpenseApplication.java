@@ -7,6 +7,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import java.time.Instant;
 import java.time.LocalDateTime;
 import java.util.Set;
 
@@ -25,7 +26,7 @@ public class ExpenseApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        Set<Expense> expenses = Set.of(new Expense(1L, "Lenovo laptop",  Category.ELECTRONICS, LocalDateTime.now(), "Tallinn"));
+        Set<Expense> expenses = Set.of(new Expense(1L, "Lenovo laptop",  Category.ELECTRONICS, Instant.now(), "Tallinn"));
         expenseRepository.saveAll(expenses);
     }
 

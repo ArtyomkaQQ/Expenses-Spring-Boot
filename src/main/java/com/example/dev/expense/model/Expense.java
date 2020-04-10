@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.time.Instant;
 import java.time.LocalDateTime;
 
 @Entity
@@ -20,7 +21,7 @@ public class Expense {
 
     private String description;
     private Category category;
-    private LocalDateTime expenseDate;
+    private Instant expenseDate;
     private String location;
 
 }
